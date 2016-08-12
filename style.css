@@ -1,0 +1,691 @@
+/* 
+Theme Name: Waterweavers
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+html {
+	height:100%;
+}
+body {
+	width: 100%;
+	font-family: 'Arvo', serif;
+	font-size: 100%;
+	position: relative;
+	height:100%;
+	background-color: #f8faf0;
+	overflow-x: hidden; 
+}
+a {
+	color:#f04b32;
+}
+	a:hover {
+		text-decoration: none;
+	}
+a img {
+	border: none !important;
+}
+.bentonsanscondmedium {
+  font-family: "Benton Sans Cond Medium", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.bentonsanscondmediumitalic {
+  font-family: "Benton Sans Cond Medium", sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.mobile {
+	display: none;
+}
+.nonMobile {
+	display: block;
+}
+.yesApp {
+	display: none;
+}
+#mapPane img, #contentPane img {
+	display: block;
+	width: 100%;
+}
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+	text-align: center;
+	font-family: "Benton Sans Cond Medium", sans-serif;
+	letter-spacing: .04em;
+	font-style: normal;
+  	font-weight: normal;
+}
+.updownbtns {
+	text-align: center;
+	position: fixed;
+	margin-left: -15px;
+	top: 100%;
+	left: 41.5625%;
+	z-index: 1000;
+	background-color: #f04b32;
+	width: 250px;
+}
+#up {
+	display: none;
+	padding: 7px;
+	text-transform: uppercase;
+	color:#fff;
+	font-size: .6875em;
+}
+#down {
+	display: none;
+	padding: 7px;
+	text-transform: uppercase;
+	color:#fff;
+	font-size: .6875em;
+}
+.up {
+	cursor: pointer;
+}
+#titlePane {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 37px;
+	z-index: 500;
+	background-color: rgba(255, 255, 255, .7);
+	font-family: "Benton Sans Cond Medium", sans-serif;
+	font-style: normal;
+  	font-weight: normal;
+}
+.gmnoprint .gm-style-mtc div, .gmnoprint div div, .gmnoprint div a {
+	font-family: "Benton Sans Cond Medium", sans-serif !important;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+}
+	#titlePane h1 {
+		position: absolute;
+		bottom: 0;
+		font-size: 1.25em;
+		padding: 0 1.5625% 5px 1.5625%;
+		letter-spacing: .24em;
+		text-transform: uppercase;
+		width: auto;
+		float: left;
+		color: #f04b32;
+		font-weight: normal;
+	}
+	#titlePane #controlPanel {
+		position: absolute;
+		bottom:0px;
+		right: 0;
+		height: auto;
+		padding: 0 1.5625% 9px 1.5625%;
+		font-size: .6875em;
+		text-transform: uppercase;
+		width: auto;
+		float: left;
+		text-align: right;
+		letter-spacing: .04em;
+	}
+		#controlPanel img {
+			display: inline-block;
+			width: 11px;
+			height: 11px;
+			vertical-align: text-bottom;
+			padding-bottom: 2px;
+		}
+		.filter {
+			float: left;
+			margin-left: 30px;
+			position: relative;
+			bottom: 0;
+		}
+		.checkbox {
+			background-color: #fafafa;
+			border: 1px solid #cacece;
+			width: 10px;
+			height: 10px;
+			margin-right: 7px;
+			cursor: pointer;
+			float: left;
+		}
+		#checkboxAbout.checked, #checkboxList.checked {
+			background-color: #f04b32;
+		}
+		#checkboxObjects.checked {
+			background: #ec7500;
+		}
+		#checkboxRiver.checked {
+			background: #2d59ea;
+		}
+		.thumbRadio {
+			width: 10px;
+			height: 10px;
+			background-color: #fafafa;
+			border: 1px solid #cacece;
+			cursor: pointer;
+			margin-right: 7px;
+			margin-bottom: 7px;
+		}
+		.activeThumb {
+			background-color: #f04b32;
+		}
+		select {
+			border: 1px solid #000000;
+			background: #fafafa;
+			font-family: "Benton Sans Cond Medium", sans-serif !important;
+			font-size: inherit;
+			text-transform: uppercase;
+			border-radius: 0;
+			padding: 1px 4px;
+			margin: -2px 0 0 0;
+			cursor: pointer;
+		}
+#mapPane {
+	position: fixed;
+	top:0%;
+	left:0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+}
+#map {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right:0;
+	bottom:0;
+	left: 0;
+	margin: 0;
+	z-index: 110;
+}
+.zoomControls, .mapTypeControls {
+	padding-top: 45px;
+}
+#aboutText {
+	width: 75%;
+	height: auto;
+	max-width: 800px;
+	margin: auto;
+	padding: 15px;
+	position: absolute;
+	top: 50px;
+	right:0;
+	left:0;
+	z-index: 120;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#listView {
+	width:40%;
+	position: absolute;
+	top: 0;
+	right: -100%;
+	z-index:111;
+	background-color: #a6a59f;
+	height: 100%;
+	color:#fffef5;
+	font-weight: normal;
+	font-family: "Benton Sans Cond Medium", sans-serif;
+	letter-spacing: .0175em;
+	overflow: hidden;
+}
+	.listContainer {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		padding: 0;
+		position: absolute;
+	}
+		#listSizing {
+			padding-top:37px;
+		}
+	.listItem {
+		border-bottom: 1px solid #9b9a95;
+		cursor: pointer;
+		background-color: #a6a59f;
+		font-size: .875em; /* 14/16 */
+		font-family: "Benton Sans Cond Medium", sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1.30769231em;
+		padding: 7px 20px;
+	}
+
+		.listItemObject {
+			padding: 7px 20px 7px 40px;
+		}
+		.hiddenListItem {
+			display: none;
+		}
+	#listControls {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 0 3px;
+		height: 100%;
+		text-align: center;
+		background-color: #9b9a95;
+		width: 10px;
+	}
+		#listUp {
+			position: absolute;
+			top: 45px;
+			cursor: pointer;
+			display: none;
+		}
+		#listDown {
+			position: absolute;
+			bottom: 7px;
+			cursor: pointer;
+		}
+	.listClosed {
+		display: none;
+	}
+	.listOpen {
+		display: block;
+	}
+	#aboutText p {
+		font-size: .8125em;
+		line-height: 1.30769231em;
+		padding-bottom: 18px;
+	}
+	#aboutText h1 {
+		font-size: 1.25em;
+		padding-bottom: 18px;
+		padding-right: 55px;
+		color: #f04b32;
+		font-family: "Benton Sans Cond Medium", sans-serif;
+		letter-spacing: .0175em;
+		font-style: normal;
+  		font-weight: normal;
+	}
+	#closeBtn {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: .875em;
+		cursor: pointer;
+		font-family: "Benton Sans Cond Medium", sans-serif;
+		letter-spacing: .0175em;
+		font-style: normal;
+  		font-weight: normal;
+	}
+.contentPane {
+	position:fixed;
+	top: 100%;
+	left: 0;
+	padding: 0;
+	width: 100%;
+	height: 0%;
+	z-index: 2;
+	background-color: #f8faf0;
+}
+.contentPaneContainer {
+	padding: 0 1.5625% 15px 1.5625%;
+	width: 96.875%;
+	height:95%;
+}
+
+.postItem {
+	height: 100%;
+	width:100%;
+}
+	.teaserContent {
+		width: 100%;
+		padding: 60px 0 15px 0;
+		height: auto;
+	}
+	.postHeaders {
+		width: 34%;
+		float:left;
+		font-family: "Benton Sans Cond Medium", sans-serif;
+		letter-spacing: .0175em;
+		font-style: normal;
+  		font-weight: normal;
+	}
+	.artistItem .postHeaders, {
+		width: 100%;
+	}
+	.riverItem .postHeaders {
+		width: 100%;
+		padding-bottom: 15px;
+	}
+	.postItem p, .postContent ul {
+		padding-bottom: 18px;
+		font-size: .8125em; /* 13/16 */
+		line-height: 1.30769231em;
+	}
+	.postContent ul {
+		padding-left: 22px;
+	}
+	.postItem h1 {
+		font-size: 1.25em; /* 20/16 */
+		width:100%;
+		font-family: "Benton Sans Cond Medium", sans-serif;
+		font-style: normal;
+  		font-weight: normal;
+	}
+	.riverItem h1, .riverItem a {
+		color: #2d59ea;
+	}
+	.riverItem .activeThumb {
+		background-color: #2d59ea;
+	}
+	.objectItem h1, .objectItem a {
+		color: #ec7500;
+	}
+	.objectItem .activeThumb {
+		background-color: #ec7500;
+	}
+	.postItem h2 {
+		font-size: .875em; /* 14/16 */
+		width:100%;
+		font-family: "Benton Sans Cond Medium", sans-serif;
+		font-style: normal;
+  		font-weight: normal;
+	}
+		.artistName a {
+			color:#000;
+		}
+			.artistName a:hover {
+				text-decoration: none;
+			}
+	.postContent {
+		width: 34%;
+		padding-right: 6%;
+		float: left;
+		display: none;
+	}
+	.riverItem .images {
+		width: 96.875%;
+		height: 60%;
+		left: 1.5625%;
+		right: 1.5625%;
+		padding-top: 120px;
+	}
+		.riverItem .images img {
+			max-width: 100%;
+			max-height: 100%;
+			width: auto !important;
+			height: auto;
+		}
+	.artistItem .postContent {
+		width: 100%;
+		padding-right: 0;		
+	}
+		.artistItem .postContent p {
+		}
+		.artistItem h1 {
+			color:#f04b32;
+		}
+		#relatedExHeader {
+			padding-bottom: 15px;
+			border-bottom: 1px solid #e8eae1;
+		}
+		.relatedExItems {
+			float: left;
+			margin-left: 14px;
+		}
+			.relatedExItem {
+				padding: 15px;
+				border-left: 1px solid #e8eae1;
+				border-right:1px solid #e8eae1;
+				border-bottom: 1px solid #e8eae1;
+			}
+				.relatedExItem img {
+					width:20% !important;
+					height:auto !important;
+					float: left;
+					cursor: pointer;
+				}
+				.relatedExItem h2 {
+					width: 75%;
+					padding-left: 5%;
+					float: left;
+					font-size: .8125em;
+					line-height: 1.30769231em;
+					cursor: pointer;
+					color: #ec7500;
+				}
+		.artistContent {
+			float: left;
+		}
+	.images {
+		width: 58.4375%;
+		right:15px;
+		top:100%;
+		padding-top: 105px;
+		float: left;
+		position: fixed;
+		height: 50%;
+		display: none;
+	}
+		.images .lrgImg {
+			width: 100%;
+			float: left;
+			height:100%;
+		}
+		.images .lrgImg img {
+			max-width: 100%;
+			max-height: 75%;
+			width: auto !important;
+			height: auto;
+		}
+			.images .lrgImg li {
+				display: none;
+				height: 100%;
+			}
+			.images .lrgImg li:first-child {
+				display: block;
+			}
+			.images .lrgImg .caption {
+				width: 74%;
+				padding-right: 1%;
+				padding-top: 10px;
+				font-size: .8125em; /* 13/16 */
+				line-height: 1.30769231em;
+				font-family: "Benton Sans Cond Medium", sans-serif;
+				letter-spacing: .0175em;
+  				font-style: normal;
+  				font-weight: normal;
+			}
+		.images .thumbnail {
+			width:100%;
+			float: left;
+		}
+			.thumbnail ul {
+				position: absolute;
+				left: 0;
+				top: 70px;
+				height: auto;
+			}
+			.images .thumbnail li {
+				float: left;
+				width: auto;
+			}
+		.images li {
+			list-style: none;
+		}
+		.images .slides {
+			height:100%;
+		}
+	.featuredImageContainer {
+		position: absolute;	
+		left: -100000000px;
+	}
+	.featuredImage {
+		height: auto;
+		overflow: hidden !important;
+		cursor: pointer;
+	}
+	.featuredImage img {
+		height: auto;
+		width: auto;
+		max-width: 100px;
+		max-height:100px;
+		overflow: hidden !important;
+		display: block;
+	}
+	.theInfoBoxes {
+		height: auto;
+		width: 100%;
+		max-width: 100px;
+		max-height: 100px;
+		overflow: hidden;
+	}
+	.fancybox-bg {
+		background-image: none !important;
+	}
+	#fancybox-title {
+		font-family: "Benton Sans Cond Medium", sans-serif !important;
+	}
+	#fancybox-close {
+		background: none !important;
+		width:auto !important;
+		right:0 !important;
+		top: -22px !important;
+	}
+	#fancybox-close:before {
+		content: 'X CLOSE';
+		font-family: "Benton Sans Cond Medium", sans-serif;
+		font-size: .875em;
+		letter-spacing: .0175em;
+		color:#000;
+	}
+	#fancybox-right-ico, #fancybox-left-ico {
+		background: rgba(255, 255, 255, 0.7) !important;
+		border-radius: 15px;
+	}
+	#fancybox-right-ico:before {
+		content: '\00bb';
+		color:#000;
+		font-family: "Benton Sans Cond Medium", sans-serif;
+		font-size: 21.5px;
+		padding-left: 10px;
+	}
+	#fancybox-left-ico:before {
+		content: '\00ab';
+		color:#000;
+		font-family: "Benton Sans Cond Medium", sans-serif;
+		font-size: 21.5px;
+		padding-left: 9px;	
+	}
+
+
+@media all and (max-width: 795px) {
+	#titlePane {
+		height: auto;
+	}
+	#titlePane h1 {
+		width: 100%;
+		position: relative;
+		padding-top: 10px;
+	}
+	#titlePane #controlPanel {
+		width: 100%;
+		position: relative;
+		padding-bottom: 0;
+	}
+	#controlPanel .filter {
+		margin-left: 0;
+		margin-right: 15px;
+		margin-bottom: 10px;
+	}
+	.zoomControls, .mapTypeControls {
+		padding-top: 90px;
+	}
+}
+
+@media all and (max-width: 550px) {
+	body {
+	}
+	.mobile {
+		display: block;
+	}
+	.nonMobile {
+		display: none;
+	}
+	#aboutText {
+		width:96%;
+		height: 100%;
+		overflow-y: scroll;
+		padding: 2%;
+		margin: 0;
+		position: relative;
+		background-color: rgba(248, 250, 240, 1);
+	}
+		#aboutText h1 {
+			padding-top: 108px;
+		}
+	#titlePane {
+		background-color: rgba(248, 250, 240, 1);
+	}
+	#mapPane {
+		overflow: hidden;
+	}
+	#closeBtn.mobile {
+		position: relative;
+		top:0;
+		bottom: 0;
+		left:0;
+		width: 98%;
+		padding: 2% 0;
+		margin: 0;
+	}
+	.updownbtns {
+		width: 100%;
+		left:0;
+		margin: 0;
+		padding: 0;
+	}
+	#up, #down {
+		padding: 0px 30px;
+		font-size: .8125em;
+		line-height: 33px;
+	}
+	.postItem .postHeaders {
+		width: 100%;
+	}
+	.postContent {
+		width: 100%;
+		padding-right: 0;
+	}
+	.images {
+		position: relative;
+		width:100%;
+		right:0;
+		padding-top: 0px !important;
+		top:0 !important;
+	}
+	.thumbnail ul {
+		display: none !important;
+	}
+	.lrgImg, .slides, .slides li, .slides li img {
+		height: auto !important;
+		width:100% !important;
+		max-height: none !important;
+		display: block !important;
+	}
+	.slides .caption {
+		padding-bottom: 30px;
+	}
+	.listItem {
+		font-size: .6857em;
+		padding: 5px;
+	}
+	.listItemObject {
+		padding: 5px 5px 5px 10px;
+	}
+	.relatedExItems {
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+	.artistContent {
+		width: 100% !important;
+	}
+}	

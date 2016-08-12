@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Untitled layer</name>
+		<Placemark>
+			<styleUrl>#line-000000-4</styleUrl>
+			<name>Line 1</name>
+			<LineString>
+				<tessellate>0</tessellate>
+				<coordinates>-75.04005432128906,10.817119749037545,0.0 -74.95834350585938,10.836003604375154,0.0 -74.90341186523438,10.780023001250841,0.0 -74.81895446777344,10.74966771410236,0.0</coordinates>
+			</LineString>
+		</Placemark>
+		<Style id='line-000000-4'>
+			<LineStyle>
+				<color>ff000000</color>
+				<width>4</width>
+			</LineStyle>
+		</Style>
+	</Document>
+</kml>

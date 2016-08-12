@@ -1,0 +1,15 @@
+/* Generic context menu styles */
+#cursorMessageDiv {
+	position: absolute;
+	z-index: 99999;
+	border: solid 1px #CCC;
+	background: #f8faf0;
+	padding: 2px;
+	margin: 0px;
+	display: none;
+	font-family: "Benton Sans Cond Medium";
+	font-style: normal;
+  	font-weight: normal;
+  	font-size: .875em;
+  	letter-spacing: .0175em;
+}
